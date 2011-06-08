@@ -1,1 +1,23 @@
-Django reCaptcha.
+Makes adding reCAPTCHA fields to Django forms easy.
+
+Installation:
+
+First, make sure you have the recaptcha-client library installed:
+
+    pip install recaptcha-client
+
+(or)
+
+    easy_install recaptcha-client
+
+
+Once the library is installed, set your reCAPTCHA public and private keys in your Django project's settings.py file.  You will want to use the keys *RECAPTCHA_PUBLIC_KEY* and *RECAPTCHA_PRIVATE_KEY* for this.
+
+The default error messages I wrote are pretty flavorless.  You can change these by creating a *RECAPTCHA_ERROR_MESSAGES* dictionary in your settings.py file.  The error message keys are as follows:
+
+invalid-site-private-key:  We weren't able to verify the private key.
+invalid-request-cookie: The challenge parameter of the verify script was incorrect.
+incorrect-captcha-sol: The CAPTCHA solution was incorrect.
+recaptcha-not-reachable: The Django server was unable to reach the reCAPTCHA server.
+
+This has been tested against recaptcha-client version 1.0.6 and Django 1.3.
