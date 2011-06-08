@@ -2,7 +2,7 @@ Makes adding reCAPTCHA fields to Django forms easy.
 
 Installation:
 
-First, make sure you have the recaptcha-client library installed:
+First, make sure you have the [recaptcha-client](http://pypi.python.org/pypi/recaptcha-client) library installed:
 
     pip install recaptcha-client
 
